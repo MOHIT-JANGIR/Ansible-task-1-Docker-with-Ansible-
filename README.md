@@ -74,7 +74,7 @@ $ ansible --version
 
 
 
-# you can also remove # from host_key_checking and set it to false, because when ansible tries to connect to a remote system it connects through the ssh protocol which will fail.
+# you can also remove # from `host_key_checking ` and set it to false, because when ansible tries to connect to a remote system it connects through the ssh protocol which will fail.
 
 ### Now Lets check our hosts file.
 
@@ -96,7 +96,7 @@ $ ansible all --list-hosts
 $ ansible <IP_Address_of_the_remote_system> -m ping
 ```
 
-# When you receive the response as "pong" means its working absolutely fine.
+# When you receive the response as `"pong"` means its working absolutely fine.
 
 **we will be using the ansible-playbook using one single YAML file because ansible only understands YAML language to perform Task.
 
@@ -147,7 +147,7 @@ $ ansible <IP_Address_of_the_remote_system> -m ping
         enabled: yes
 ```
 
-**Now we need docker SDK for python3 for running the docker module
+**Now we need `docker SDK` for python3 for running the docker module
 
 ```
 - name: python3 Docker SKD
@@ -167,7 +167,7 @@ $ ansible <IP_Address_of_the_remote_system> -m ping
 
 **Now we will create a directory in our remote system and copy our code to the directory in our remote system.
 
-# and thenwhere our apache-server runs that is into the /var/www/html. And for performing the same I will be using the file and the copy command.
+# and thenwhere our apache-server runs that is into the `/var/www/html.` And for performing the same I will be using the file and the copy command.
 
  ```
  - name: Creating a folder in the remote system
@@ -189,7 +189,7 @@ $ ansible <IP_Address_of_the_remote_system> -m ping
         dest: "/arun_ansible/"
 ```
 
-**Now up next we will create our docker container and for that we will first pull the httpd image of docker and then we will move the location of our file to the /arun_ansible/: /usr/local/apache2/htdocs/ and then we will expose it to the outside world.
+**Now up next we will create our docker container and for that we will first pull the httpd image of docker and then we will move the location of our file to the `/mohit_ansible/: /usr/local/apache2/htdocs/ ` and then we will expose it to the outside world.
 
 ```
 - name: Creating a Docker Container
@@ -212,7 +212,7 @@ $ ansible <IP_Address_of_the_remote_system> -m ping
 
         volumes:
 
-          - /arun_ansible/:/usr/local/apache2/htdocs/
+          - /mohit_ansible/:/usr/local/apache2/htdocs/
 ```
 
 # now that all our requirements are set, run the file using the command...
