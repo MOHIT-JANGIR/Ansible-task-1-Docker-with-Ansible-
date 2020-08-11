@@ -32,7 +32,7 @@
 
 **Now lets begin with our task**:
 
-**So in the first step I will be launching 2 OS in which one of the node I have configured as the controller node which will be configured with the Ansible tool and this node will be used for writing the anisble-playbook.
+**So in the first step I will be launching 2 OS in which one of the node I have configured as the controller node which will be configured with the Ansible tool and this node will be used for writing the anisble-playbook.**
 
 **The other node will be my manager node on which all the operations are to be performed.
 
