@@ -30,26 +30,26 @@
 
 
 
-**Now lets begin with our task**:
+## Now lets begin with our task:
 
-**So in the first step I will be launching 2 OS in which one of the node I have configured as the controller node which will be configured with the Ansible tool and this node will be used for writing the anisble-playbook.**
+## So in the first step I will be launching 2 OS in which one of the node I have configured as the controller node which will be configured with the Ansible tool and this node will be used for writing the anisble-playbook.**
 
-**The other node will be my manager node on which all the operations are to be performed.
+## The other node will be my manager node on which all the operations are to be performed.
 
-**You use the yum command to install software.
+## You use the yum command to install software.
 
 ```
 $ yum install ansible -y
 ```
 
-**if that doesn't work you can use pip3 command to install the same. Since, Ansible is a tool that uses python3 script in its backend.
+## if that doesn't work you can use pip3 command to install the same. Since, Ansible is a tool that uses python3 script in its backend.
 
 ```
 $ pip3 install ansible
 ```
 
 
-**and check the version with this.
+# and check the version with this.
 
 ```
 $ ansible --version
@@ -98,9 +98,9 @@ $ ansible <IP_Address_of_the_remote_system> -m ping
 
 # When you receive the response as `"pong"` means its working absolutely fine.
 
-**we will be using the ansible-playbook using one single YAML file because ansible only understands YAML language to perform Task.
+## we will be using the ansible-playbook using one single YAML file because ansible only understands YAML language to perform Task.
 
-**So here the first thing we need to do is to configure the yum for the docker.
+# So here the first thing we need to do is to configure the yum for the docker.
 
 ```
 - hosts: <IP_Address_of_the_remote_system>
@@ -123,7 +123,7 @@ $ ansible <IP_Address_of_the_remote_system> -m ping
   ```
   
 
-**Up next we will install the docker package, start the docker services and enable it.
+# Up next we will install the docker package, start the docker services and enable it.
 
 ```
 - name: Install Docker package and start the Docker Service
@@ -147,7 +147,7 @@ $ ansible <IP_Address_of_the_remote_system> -m ping
         enabled: yes
 ```
 
-**Now we need `docker SDK` for python3 for running the docker module
+# Now we need `docker SDK` for python3 for running the docker module
 
 ```
 - name: python3 Docker SKD
@@ -165,7 +165,7 @@ $ ansible <IP_Address_of_the_remote_system> -m ping
         var: x
 ```
 
-**Now we will create a directory in our remote system and copy our code to the directory in our remote system.
+# Now we will create a directory in our remote system and copy our code to the directory in our remote system.
 
 # and thenwhere our apache-server runs that is into the `/var/www/html.` And for performing the same I will be using the file and the copy command.
 
@@ -189,7 +189,7 @@ $ ansible <IP_Address_of_the_remote_system> -m ping
         dest: "/arun_ansible/"
 ```
 
-**Now up next we will create our docker container and for that we will first pull the httpd image of docker and then we will move the location of our file to the `/mohit_ansible/: /usr/local/apache2/htdocs/ ` and then we will expose it to the outside world.
+# Now up next we will create our docker container and for that we will first pull the httpd image of docker and then we will move the location of our file to the `/mohit_ansible/: /usr/local/apache2/htdocs/ ` and then we will expose it to the outside world.
 
 ```
 - name: Creating a Docker Container
