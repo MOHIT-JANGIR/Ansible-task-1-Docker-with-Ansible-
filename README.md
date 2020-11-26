@@ -174,7 +174,7 @@ $ ansible <IP_Address_of_the_remote_system> -m ping
 
       file:
 
-        path: "/arun_ansible"
+        path: "/mohit_ansible"
 
         state: directory
 
@@ -186,7 +186,7 @@ $ ansible <IP_Address_of_the_remote_system> -m ping
 
         src: "home.html"
 
-        dest: "/arun_ansible/"
+        dest: "/mohit_ansible/"
 ```
 
 # Now up next we will create our docker container and for that we will first pull the httpd image of docker and then we will move the location of our file to the `/mohit_ansible/: /usr/local/apache2/htdocs/ ` and then we will expose it to the outside world.
